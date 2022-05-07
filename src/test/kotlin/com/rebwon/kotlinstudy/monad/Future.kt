@@ -9,7 +9,7 @@ interface Scheduler {
     fun shutdown()
 }
 
-object SchedulerIO: Scheduler {
+object SchedulerIO : Scheduler {
     private var executorService = Executors.newFixedThreadPool(1)
     override fun execute(command: () -> Unit) {
         if (executorService.isShutdown) {
@@ -25,7 +25,7 @@ object SchedulerIO: Scheduler {
     }
 }
 
-object SchedulerMain: Scheduler {
+object SchedulerMain : Scheduler {
     override fun execute(command: () -> Unit) {
         Thread(command).start()
     }

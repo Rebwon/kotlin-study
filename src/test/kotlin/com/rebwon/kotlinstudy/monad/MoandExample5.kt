@@ -23,13 +23,13 @@ fun testEither() {
 
     fun readFile(file: File): Either<Throwable, String> {
         return try {
-            Either.Right(file.inputStream().bufferedReader().use {it.readText()})
+            Either.Right(file.inputStream().bufferedReader().use { it.readText() })
         } catch (e: Throwable) {
             Either.Left(e)
         }
     }
 
-    when(val content = openFile("greeting.txt") flatMap :: readFile) {
+    when (val content = openFile("greeting.txt") flatMap :: readFile) {
         is Either.Right -> println(content.value)
         is Either.Left -> println(content.value)
     }

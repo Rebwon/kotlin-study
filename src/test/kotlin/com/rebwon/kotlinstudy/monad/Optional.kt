@@ -1,8 +1,8 @@
 package com.rebwon.kotlinstudy.monad
 
 sealed class Optional<T> {
-    class None<T>: Optional<T>()
-    data class Some<T>(val value: T): Optional<T>()
+    class None<T> : Optional<T>()
+    data class Some<T>(val value: T) : Optional<T>()
 }
 
 infix fun <T, R> Optional<T>.map(functor: (value: T) -> R): Optional<R> {

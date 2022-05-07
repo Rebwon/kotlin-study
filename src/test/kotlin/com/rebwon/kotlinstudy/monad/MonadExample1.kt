@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
         is Result.Fail -> println("result1 is failed")
     }
 
-    when(result2) {
+    when (result2) {
         is Result.Success -> println(result2.value)
         is Result.Fail -> println("result2 is failed")
     }

@@ -1,7 +1,6 @@
 package com.rebwon.kotlinstudy.curring
 
-class AddExample {
-}
+class AddExample
 
 fun main(args: Array<String>) {
     val op10Plus = operator(10) { a, b -> a + b }

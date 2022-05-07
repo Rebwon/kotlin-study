@@ -1,12 +1,13 @@
 package com.rebwon.kotlinstudy.monad
 
-infix fun<T, R> Result<T>.map(functor: (value: T) -> R): Result<R> {
+infix fun <T, R> Result<T>.map(functor: (value: T) -> R): Result<R> {
     return this.flatMap {
-        value -> Result.Success(functor(value))
+        value ->
+        Result.Success(functor(value))
     }
 }
 
-infix fun<T, R> Result<T>.flatMap(functor: (value: T) -> Result<R>): Result<R> {
+infix fun <T, R> Result<T>.flatMap(functor: (value: T) -> Result<R>): Result<R> {
     return when (this) {
         is Result.Success -> functor(this.value)
         is Result.Fail -> Result.Fail()

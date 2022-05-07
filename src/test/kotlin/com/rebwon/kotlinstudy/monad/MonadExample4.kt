@@ -28,5 +28,4 @@ fun testOptional() {
         is Optional.Some -> println(content.value)
         is Optional.None -> println("File not found")
     }
-
 }
