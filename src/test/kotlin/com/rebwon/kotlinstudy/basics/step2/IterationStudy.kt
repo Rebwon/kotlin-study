@@ -1,6 +1,6 @@
 package com.rebwon.kotlinstudy.basics.step2
 
-import java.util.*
+import java.util.TreeMap
 
 fun fizzBuzz(i: Int) = when {
     i % 15 == 0 -> "FizzBuzz"

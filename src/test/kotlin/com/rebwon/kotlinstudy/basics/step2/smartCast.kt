@@ -11,13 +11,13 @@ fun main() {
     println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))
 }
 
-fun eval(e: Expr): Int = when(e) {
+fun eval(e: Expr): Int = when (e) {
     is Num -> e.value
     is Sum -> eval(e.left) + eval(e.right)
     else -> throw IllegalArgumentException("Unknown expression")
 }
 
-fun evalWithLogging(e: Expr): Int = when(e) {
+fun evalWithLogging(e: Expr): Int = when (e) {
     is Num -> {
         println("Num: ${e.value}")
         e.value

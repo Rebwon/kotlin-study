@@ -5,3 +5,7 @@ class Rectangle(val height: Int, val width: Int) {
 }
 
 data class AuthenticatedUser(val id: Long, val roles: List<String>)
+
+fun main() {
+    val result = "Kotlin".last()
+}
