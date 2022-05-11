@@ -1,6 +1,6 @@
 package com.rebwon.kotlinstudy.basics.step2
 
-interface Expr
+sealed interface Expr
 
 class Num(val value: Int) : Expr
 
@@ -14,7 +14,6 @@ fun main() {
 fun eval(e: Expr): Int = when (e) {
     is Num -> e.value
     is Sum -> eval(e.left) + eval(e.right)
-    else -> throw IllegalArgumentException("Unknown expression")
 }
 
 fun evalWithLogging(e: Expr): Int = when (e) {
