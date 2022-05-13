@@ -32,9 +32,9 @@ fun <T> joinToString(
     separator: String = ", ",
     prefix: String = "",
     postfix: String = ""
-) : String {
+): String {
     val result = StringBuilder(prefix)
-    for ((index, element) in collection.withIndex()){
+    for ((index, element) in collection.withIndex()) {
         if (index > 0) result.append(separator)
         result.append(element)
     }

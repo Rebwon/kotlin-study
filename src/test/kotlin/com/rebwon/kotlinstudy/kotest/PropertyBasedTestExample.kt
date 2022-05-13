@@ -4,7 +4,7 @@ import io.kotest.core.spec.style.StringSpec
 import io.kotest.data.forAll
 import io.kotest.property.checkAll
 
-class PropertyBasedTestExample: StringSpec({
+class PropertyBasedTestExample : StringSpec({
     "String size" {
         forAll<String, String> { a, b ->
             (a + b).length == a.length + b.length

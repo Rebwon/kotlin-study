@@ -1,12 +1,16 @@
 package com.rebwon.kotlinstudy.kotest
 
 import io.kotest.core.spec.BeforeTest
-import io.kotest.core.spec.style.*
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.core.spec.style.StringSpec
+import io.kotest.core.spec.style.BehaviorSpec
+import io.kotest.core.spec.style.WordSpec
+import io.kotest.core.spec.style.AnnotationSpec
+import io.kotest.core.spec.style.FeatureSpec
 import io.kotest.matchers.shouldBe
 
 class FunSpecsTest : FunSpec({
-    test("String length should return the length of the string")
-    {
+    test("String length should return the length of the string") {
         "sammy".length shouldBe 5
         "".length shouldBe 0
     }
@@ -32,7 +36,7 @@ class DynamicSpecsTest : FunSpec({
         "pam",
         "tim"
     ).forEach {
-        test("$it should be a three letter name"){
+        test("$it should be a three letter name") {
             it.length shouldBe 3
         }
     }

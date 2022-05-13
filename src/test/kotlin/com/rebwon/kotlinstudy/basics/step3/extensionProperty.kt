@@ -1,6 +1,6 @@
 package com.rebwon.kotlinstudy.basics.step3
 
-val String.something : Char
+val String.something: Char
     get() = get(length - 1)
 
 fun main() {
@@ -12,7 +12,7 @@ fun main() {
     println(sb)
 }
 
-var StringBuilder.lastChar : Char
+var StringBuilder.lastChar: Char
     get() = get(length - 1)
     set(value) {
         this.setCharAt(length - 1, value)

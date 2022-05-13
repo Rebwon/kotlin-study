@@ -2,7 +2,7 @@ package com.rebwon.kotlinstudy.kotest
 
 import io.kotest.core.spec.style.WordSpec
 
-class TestSpec : WordSpec({
+class LifeCycleHooksTest : WordSpec({
     beforeTest {
         println("Starting a test $it")
     }

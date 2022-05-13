@@ -2,9 +2,7 @@ package com.rebwon.kotlinstudy.messaging
 
 internal open class Happy {
 
-    protected fun happy() {
-
-    }
+    protected fun happy() {}
 
     class HappyImpl : Happy() {
 
