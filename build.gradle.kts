@@ -25,6 +25,14 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     runtimeOnly("com.h2database:h2")
+
+    implementation(platform("io.arrow-kt:arrow-stack:0.11.0"))
+    implementation("io.arrow-kt:arrow-core")
+    implementation("io.arrow-kt:arrow-core-data")
+    implementation("io.arrow-kt:arrow-fx")
+    implementation("io.arrow-kt:arrow-mtl")
+    implementation("io.arrow-kt:arrow-mtl-data")
+
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
     testImplementation("io.kotest:kotest-property:$kotestVersion")
